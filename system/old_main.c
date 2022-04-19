@@ -3,7 +3,7 @@
 #include <xinu.h>
 #include <stdio.h>
 
-mutex_t* lock = FALSE;
+mutex_t lock = FALSE;
 
 void    printchar(char c)
 {

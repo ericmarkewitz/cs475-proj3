@@ -20,7 +20,6 @@ void	resched(void)		// assumes interrupts are disabled
 
 	// Point to process table entry for the current (old) process
 	ptold = &proctab[currpid];
-
         if (ptold->prstate == PR_CURR) {
                 // Old process got preempted; place back on ready queue
                 ptold->prstate = PR_READY;
@@ -38,6 +37,7 @@ void	resched(void)		// assumes interrupts are disabled
 
 	// Context switch to next ready process
 	preempt = QUANTUM;
+	//kprintf("\nabout to context switch currpid: %d, oldpid: %d\n", currpid, oldpid);
 	ctxsw(&ptold->prstkptr, &ptnew->prstkptr);
 
 	// Old process returns here when resumed
