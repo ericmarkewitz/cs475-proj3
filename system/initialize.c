@@ -193,6 +193,7 @@ static	void	sysinit(void)
 			(devptr->dvinit) (devptr);
 		}
 	}
+	clkinit();
 	return;
 }
 
