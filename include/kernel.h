@@ -77,4 +77,4 @@ extern	struct queue	*readyqueue;
 
 /* config params */
 #define	AGING	TRUE		/* enable or disable aging? */
-#define QUANTUM 1 		/*quantum time slice initialization*/
+#define QUANTUM 10 		/*quantum time slice initialization*/
